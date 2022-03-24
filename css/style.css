@@ -1,3 +1,11 @@
+body { 
+    display: flex; 
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif; 
+    /* background-image: url('../images/backgroundblue.jpg'); */
+    background-image: url('../images/blackbackground.jpg');
+}  
+
 /*Changing the navigation bar*/
 nav li { 
     display: inline-block;   
@@ -5,63 +13,82 @@ nav li {
     width: 20%;  
     margin: auto; 
     font-weight: lighter;
-}  
+}
 
 /*Changing the inside of bars*/
-nav a { 
+nav a {
     text-decoration: none;
-    color: #3B4948;
-    font-family: "Arial Narrow", sans-serif;  
+    /* color: #3B4948; */
+    color: #FFFFFF;
+    /* font-family: "Arial Narrow", sans-serif;  */
     margin: 2px; 
     font-size: 20px;
-} 
+}
+
 .active a{   
     text-decoration: underline;
-    font-family: "Arial Narrow", sans-serif;  
+    /* font-family: "Arial Narrow", sans-serif;   */
     margin: 2px; 
     font-weight: bold;
-    color: #2D5D3B;
-    /* alt color, doesn't pass wave #EC8C6F; */
+    /* color: #2D5D3B; */
+    /* color: #FFE1A3 */
+    color: #FB8763
+
 }  
 
 .skip{  
-    font-family: "Arial Narrow", sans-serif;   
+    /* font-family: "Arial Narrow", sans-serif;    */
     color: #3B4948; 
     text-decoration: none;
+} 
+
+.skip{ 
+    display: none;
 }
 
+h1 { 
+    /* font-family: "PT Sans", Arial, Helvetica, sans-serif;  */
+    font-size: 44px; 
+    text-align: center;  
+    /* background-color: #FFFFFF;  */
+    color: #FFFFFF;
+}  
 
 footer { 
-    background-color: #3B4948;  
-    color: #FFFFFF; 
+    /* background-color: #FFFFFF;  
+    color: #3B4948;  */
+    background-color: #000000;
+    color: #FFFFFF;
     font-family: "Arial Narrow", sans-serif;   
 } 
 
-h1 { 
-    font-family: "PT Sans", Arial, Helvetica, sans-serif; 
-    font-size: 44px; 
-    text-align: center;  
-}  
+.explorepic { 
+    width: 400px; 
+    justify-self: center;
+
+
+}
 
 p { 
+    color: #FFFFFF;
     font-family: "PT Sans", Arial, Helvetica, sans-serif; 
     font-size: 18px; 
-    text-align: left;  
+    text-align: left;   
+    margin: 10px;
+}
+ 
+form { 
+    background-color: #000000; 
+    /* border: solid 1px #FFFFFF; */
+    /* color: orange; */
+    color: #FB8763
 }
 
-
-img { 
-    height: auto; 
-    width: 200px; 
-    border: 1px solid #3B4948;
-    margin: 5px;
-    padding: 3px;
-    justify-items: center;  
-    border-radius: 10px;
+.explorepic { 
+    animation: move 5s ease;
+}
+@keyframes move {
+    from {width: 500px; opacity: 0;}
+        to {width: 500px; opacity: 1;}
 }
 
-img:hover:nth-child(2n){  
-    /*transform: scale(4); */
-    border: 5px solid #2D5D3B;
-    /*alt color, doesn't pass wave #EC8C6F; */
-}
