@@ -1,10 +1,15 @@
 body { 
-    display: flex; 
-    flex-direction: column;
-    font-family: 'Nunito', sans-serif; 
+    font-family: 'Nunito', sans-serif;  
+    background-color: #000000;
     /* background-image: url('../images/backgroundblue.jpg'); */
-    background-image: url('../images/blackbackground.jpg');
+    /* background-image: url('../images/blackbackground.jpg'); */
 }  
+
+.nav_links { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /*Changing the navigation bar*/
 nav li { 
@@ -12,7 +17,8 @@ nav li {
     padding: 5px; 
     width: 20%;  
     margin: auto; 
-    font-weight: lighter;
+    font-weight: lighter; 
+    text-align: center;
 }
 
 /*Changing the inside of bars*/
@@ -38,12 +44,14 @@ nav a {
 
 .skip{  
     /* font-family: "Arial Narrow", sans-serif;    */
-    color: #3B4948; 
-    text-decoration: none;
+    color: #FB8763; 
+    text-decoration: none; 
+    position: relative;
+    top: -40px
 } 
 
-.skip{ 
-    display: none;
+.skip:focus { 
+    top: 0px;
 }
 
 h1 { 
@@ -54,19 +62,23 @@ h1 {
     color: #FFFFFF;
 }  
 
-footer { 
-    /* background-color: #FFFFFF;  
-    color: #3B4948;  */
-    background-color: #000000;
-    color: #FFFFFF;
-    font-family: "Arial Narrow", sans-serif;   
-} 
+.selfie { 
+    width: 250px;
+}
 
-.explorepic { 
-    width: 400px; 
-    justify-self: center;
+.sunsetflight{
+    width: 223px;
+}
 
+.fa-solid fa-plane-departure { 
+    display: inline;
+}
 
+.underpics{ 
+    width: 550px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr; 
+     
 }
 
 p { 
@@ -76,19 +88,55 @@ p {
     text-align: left;   
     margin: 10px;
 }
- 
 form { 
+    margin-top: 10px; 
     background-color: #000000; 
     /* border: solid 1px #FFFFFF; */
     /* color: orange; */
-    color: #FB8763
+    color: #FB8763; 
+} 
+
+textarea { 
+    font-family: "PT Sans", Arial, Helvetica, sans-serif; 
+} 
+
+.africapics { 
+    background-image: url('../images/sky.jpg'); 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: auto;
+
 }
 
-.explorepic { 
+footer { 
+    /* background-color: #FFFFFF;  
+    color: #3B4948;  */ 
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: "Arial Narrow", sans-serif;  
+    text-align: center;
+    border-top: 1px solid #FFFFFF;
+} 
+
+footer p{ 
+    text-align: center;
+}
+
+.explorepic {  
+    width: 500px;
     animation: move 5s ease;
 }
+
 @keyframes move {
     from {width: 500px; opacity: 0;}
         to {width: 500px; opacity: 1;}
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    h1{
+        animation:none;
+    }
 }
 

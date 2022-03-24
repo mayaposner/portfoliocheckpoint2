@@ -24,11 +24,11 @@
     </script>
 </head>
 
-<body class = 'index'>  
+<body>  
     <a class = "skip" href="#main">Skip to Main Content</a>
     <header>
         <nav>
-            <ul>
+            <ul class = nav_links>
                 <li class = 'active' ><a href = "index.html">About Me</a></li>
                 <li ><a href = "americas.html">Americas</a></li>
                 <li><a href = "europe.html">Europe</a></li>
@@ -40,24 +40,16 @@
     <main id = "main"> 
         <h1>WELCOME</h1> 
         <div class = container>
-            <!-- <img src = 'images/picself.jpeg' alt = 'picture of me on a Kenyan safari' width = 200 />  -->
-            <img src = 'images/picself.jpeg' alt = 'picture of me on a Kenyan safari' width = 200 /> 
-            <img class = 'explorepic' src = 'images/indexexplore.jpg' alt = 'Explore wording on Sunset' width = 200 /> 
-
-            
-            <!-- <p id = "selfie"> Hi, I'm Maya! Welcome to my travel site. One of my favorite activities is traveling 
-            and visit other parts of the world. I am so fortunate to been able to explore both 
-            near and far. I hope you enjoy!
-            </p>  
-            <p> My travel photo journal is divided by areas of the world. You can see pictures of sites,
-                restaurants, and nature from Europe, various places in North and Central America, and Africa.
-                I want to travel to even more places. Next on my bucket list is Morocco and Italy. Stay tuned!
+            <div class = opening >
+                <img class = 'explorepic' src = 'images/indexexplore.jpg' alt = 'Explore wording on Sunset' width = 200 />   
+            </div>
+            <p>Hi, I'm Maya! Welcome to my travel journal.  One of my favorite activities is traveling and visiting other parts of the world.  
+                I am so fortunate to have been table to travel both near and far. I hope you enjoy!
             </p> 
-            <img src = 'images/airplane.jpg' alt = 'airplane window at sunset' width = '200'/>  -->
-
-            <p>Hi, I'm Maya! Welcome to my travel journal.  One of my favorite activities is traveling and visiting other parts of the world. 
-                I am so fortunate to have been table to travel both near and far. 
-            </p> 
+            <div class = 'underpics'>
+                <img class = 'selfie' src = 'images/picself.jpeg' alt = 'picture of me on a Kenyan safari' width = 200 /> 
+                <img class = 'sunsetflight' src = 'images/airplane.jpg' alt = 'airplane window at sunset' width = '200'/>
+            </div> 
                 
             <div></div>
 
@@ -65,30 +57,31 @@
 
             <div></div>
             
-            <p> Next on my travel buck list is Italy and Morocco. Stay tuned!</p>
+            <p> I want to travel to even more places. Next on my travel buck list is Italy and Morocco. Stay tuned!</p>
             
         </div> 
 
 
     </main> 
     <footer>
-        <i class="fa-solid fa-plane-departure"></i>  
         <p> Maya Posner &copy; 2022</p> 
+        <i class="fa-solid fa-plane-departure"></i>  
         <form action="https://formspree.io/f/xvolqakk" method="POST"> 
-            <label class = "first_name_area"> Your first name:  </label>  
-            <input type = 'text' name = 'name' placeholder="First Name">  
+            <label for = 'firstname' class = "first_name_area"> Your first name:  </label>  
+            <input id = 'firstname' type = 'text' name = 'name' placeholder="First Name">  
             
-            <label class = "last_name_area"> Your last name:  </label>  
-            <input type = 'text' name = 'name' placeholder="Last Name"> 
+            <label for ='lastname' class = "last_name_area"> Your last name:  </label>  
+            <input id = 'lastname' type = 'text' name = 'name' placeholder="Last Name"> 
 
-            <label class = "pref_name_area"> Your preferred name:  </label>  
-            <input type = 'text' name = 'name' placeholder="Preferred Name"> 
+            <label for = 'prefname' class = "pref_name_area"> Your preferred name:  </label>  
+            <input id = 'prefname' type = 'text' name = 'name' placeholder="Preferred Name"> 
 
-            <label class = "email_area"> Your email: </label>  
-            <input type="email" name="email" placeholder="Email">    
+            <label for = 'email' class = "email_area"> Your email: </label>  
+            <input id = 'email' type="email" name="email" placeholder="Email">    
 
-            <label class = "destination_area"> Your favorite travel destination: </label>  
-            <textarea name="favorite destination" placeholder= "Favorite Vacation Destination"></textarea>  
+            <label for = 'dest' class = "destination_area"> Your favorite travel destination: </label>  
+            <textarea id = 'dest' name="favorite destination" placeholder= "Favorite Vacation Destination"></textarea>  
+
 
             <button class = "send" type="submit">Send</button>
         </form> 
@@ -96,5 +89,7 @@
 </body>
 </html>
 
-<!-- FOR MOBILE VIEW SKIP TO MAIN CONTENT DISPLAY NONE -->
-<!-- FOR LARGER VIEW, USE Min height for screeen of like 80 vh  -->
+<!-- for later: FOR LARGER VIEW, USE Min height for screeen of like 80 vh  --> 
+<!-- change where background image is --> 
+<!-- break up pictures and text--> 
+<!-- extra--> 
