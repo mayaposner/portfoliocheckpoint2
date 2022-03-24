@@ -1,11 +1,9 @@
-html { 
-    max-width: fit-content;
-}
 body { 
     font-family: 'Nunito', sans-serif;  
     background-color: #000000;
     /* background-image: url('../images/backgroundblue.jpg'); */
     /* background-image: url('../images/blackbackground.jpg'); */
+    cursor: url(../cursor/suitcase.png), auto;  
 }  
 
 .nav_links { 
@@ -77,12 +75,13 @@ h1 {
     display: inline;
 }
 
-.underpics{ 
-    width: 550px;
+
+/* .underpics{ 
+    width: 50v;
     display: inline-grid;
     grid-template-columns: 1fr 1fr; 
      
-}
+} */
 
 p { 
     color: #FFFFFF;
@@ -103,7 +102,7 @@ textarea {
     font-family: "PT Sans", Arial, Helvetica, sans-serif; 
 } 
 
-.africapics { 
+.africapics, .americapics { 
     background-image: url('../images/sky.jpg'); 
     display: flex;
     flex-direction: row;
@@ -112,6 +111,12 @@ textarea {
     height: auto;
 
 }
+
+/* .americaspicsgrid{ 
+    background-image: url('../images/sky.jpg'); 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+} */
 
 footer { 
     /* background-color: #FFFFFF;  
@@ -127,14 +132,27 @@ footer p{
     text-align: center;
 }
 
-.explorepic {  
-    width: 500px;
-    animation: move 5s ease;
+.opening { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.europepics { 
+    background-image: url('../images/sky.jpg'); 
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
 }
 
 @keyframes move {
-    from {width: 500px; opacity: 0;}
-        to {width: 500px; opacity: 1;}
+    from {width: 100%; opacity: 0;}
+        to {width: 100%; opacity: 1;}
+}
+
+.explorepic {  
+    animation: move 3s ease; 
 }
 
 @media screen and (prefers-reduced-motion: reduce){
